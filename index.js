@@ -7,19 +7,27 @@ dotenv.config();
 const openai = new OpenAi({apiKey: process.env.OPENAI_KEY});
 
 async function main(){
-    const question = await promptMessage();
-    // console.log("question",question);
+    const messages = [];
 
-    const completion = await openai.chat.completions.create({
-        messages: [
-            {
-                "role": "user",
-                "content": question
-            }
-        ],
-        model: "gpt-3.5-turbo"
-    });
-    console.log(completion.choices[0].message.content);
+    while (true){
+        const question = await promptMessage();
+
+        messages.push({
+            "role": "user",
+            "content": question
+        });
+
+        const completion = await openai.chat.completions.create({
+            messages,
+            model: "gpt-3.5-turbo"
+        });
+
+        messages.push(completion.choices[0].message);
+
+        // console.log(completion.choices[0].message.content);
+        console.log(messages);
+
+    }
 
     // console.dir(completion,{depth:null});
 }
