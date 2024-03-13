@@ -2,9 +2,11 @@
   "name": "treinamento-assistente-turma-teste",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "1-primeiro-encontro/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node 1-primeiro-encontro/index.js",
+    "start2": "node 1-primeiro-encontro/index2.js",
+    "start3": "node 1-primeiro-encontro/index3.js"
   },
   "type": "module",
   "author": "",
