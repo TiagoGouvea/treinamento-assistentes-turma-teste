@@ -7,7 +7,9 @@
     "start": "node 1-primeiro-encontro/index.js",
     "start2": "node 1-primeiro-encontro/index2.js",
     "start3": "node 1-primeiro-encontro/index3.js",
-    "start4": "node 2-segundo-encontro/index.js"
+    "start4": "node 2-segundo-encontro/index.js",
+    "setup-assistant": "node 2-segundo-encontro/assistente-setup.js",
+    "assistant": "node 2-segundo-encontro/assistente.js"
   },
   "type": "module",
   "author": "",
